@@ -13,6 +13,8 @@
     "mocha": "^5.2.0"
   },
   "scripts": {
+    "flow": "flow",
+    "flow-init": "npm run flow init",
     "test": "mocha"
   },
   "repository": {
