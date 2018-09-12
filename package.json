@@ -9,12 +9,11 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-flow": "^6.23.0",
-    "flow-bin": "^0.80.0",
     "mocha": "^5.2.0"
   },
   "scripts": {
     "flow": "flow",
-    "flow-init": "npm run flow init",
+    "build": "babel src/ -d dist/",
     "test": "mocha"
   },
   "repository": {
