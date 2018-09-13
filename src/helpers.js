@@ -1,4 +1,4 @@
-//      
+// @flow
 
 /**
  * Build path for the request
@@ -8,7 +8,7 @@
  * @param {number} numOfDays The second number.
  * @returns {string} The sum of the two numbers.
  */
-function createPath(apiKey        , city        , date        , numOfDays         = 1)         {
+function createPath(apiKey: string, city: string, date: string, numOfDays: number = 1): string {
   return `/premium/v1/weather.ashx?format=json&num_of_days=${numOfDays}
           &q= ${encodeURIComponent(city)}
           &key=${apiKey}

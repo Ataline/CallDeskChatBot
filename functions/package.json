@@ -1,42 +1,21 @@
 {
-  "name": "calldeskchatbot",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
   "dependencies": {
-    "actions-on-google": "^2.2.0",
     "firebase-admin": "~6.0.0",
-    "firebase-functions": "^2.0.2",
-    "dialogflow": "0.6.0",
-    "dialogflow-fulfillment": "0.5.0"
+    "firebase-functions": "^2.0.3"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^9.0.0",
-    "babel-preset-flow": "^6.23.0",
-    "eslint": "^5.5.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-flowtype": "^2.50.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1",
-    "flow-bin": "^0.80.0",
-    "mocha": "^5.2.0"
+    "eslint": "^4.12.0",
+    "eslint-plugin-promise": "^3.6.0"
   },
-  "scripts": {
-    "lint": "eslint *.js",
-    "flow": "flow",
-    "build": "babel src/ -d dist/",
-    "test": "mocha"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ataline/CallDeskChatBot.git"
-  },
-  "author": "Ataline",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Ataline/CallDeskChatBot/issues"
-  },
-  "homepage": "https://github.com/Ataline/CallDeskChatBot#readme"
+  "private": true
 }
