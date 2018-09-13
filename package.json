@@ -4,15 +4,33 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "eslint": "^5.5.0"
+    "actions-on-google": "^2.2.0",
+    "firebase-admin": "~6.0.0",
+    "firebase-functions": "^2.0.2",
+    "dialogflow": "0.6.0",
+    "dialogflow-fulfillment": "0.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^9.0.0",
     "babel-preset-flow": "^6.23.0",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
     "flow-bin": "^0.80.0",
+    "flow-remove-types": "^1.2.3",
     "mocha": "^5.2.0"
   },
   "scripts": {
+    "build": "flow-remove-types src/ -d functions/",
+    "start": "firebase serve --only functions:weatherBot",
+    "deploy": "firebase deploy --only functions:weatherBot",
+    "lint": "eslint ./functions/*.js",
+    "flow": "flow",
     "test": "mocha"
   },
   "repository": {
